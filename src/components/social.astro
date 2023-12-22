@@ -1,0 +1,21 @@
+---
+import { Github, MessageSquareDot, Twitter } from "lucide-preact";
+
+const { name, href, icon } = Astro.props;
+---
+
+<li class="w-3/4 flex">
+    <a
+        href={href}
+        class="w-3/4 rounded-md p-2 flex flex-row hover:bg-slate-800/50 hover:text-white transition-all duration-150"
+    >
+        <span class="mr-2 align-middle">
+            {icon === "Github" ? <Github /> : <span />}
+            {icon === "Twitter" ? <Twitter /> : <span />}
+            {icon === "Discord" ? <MessageSquareDot /> : <span />}
+        </span>
+        <p class="align-middle">
+            {name}
+        </p>
+    </a>
+</li>
