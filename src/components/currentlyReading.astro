@@ -1,0 +1,28 @@
+---
+const { title, author, description, image, progress } = Astro.props;
+---
+
+<div
+    class="flex flex-row w-full lg:w-4/5 overflow-hidden border-2 border-slate-500 rounded-lg"
+>
+    <img class="h-48" alt="Book cover" src={image} />
+    <div class="flex flex-col p-4 border-l-2 border-slate-500 justify-between">
+        <div class="-mt-2">
+            <span class="text-xs text-slate-500">Currently Reading</span>
+            <h2 class="font-bold text-xl">{title}</h2>
+            <h3 class="font-italic font-mono">{author}</h3>
+            <p class="indent-4 text-sm">
+                {description}
+            </p>
+        </div>
+
+        <div class="bg-slate-700 mt-2 rounded-full overflow-hidden">
+            <div
+                class=`bg-sky-500 text-white font-mono text-right`
+                style=`width: ${progress}%`
+            >
+                <span class="mr-2">{progress}%</span>
+            </div>
+        </div>
+    </div>
+</div>

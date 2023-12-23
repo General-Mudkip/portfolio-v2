@@ -2,9 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Age from "../components/age.astro";
 import Social from "../components/social.astro";
-import { Github } from "lucide-preact";
 import Quote from "../components/quote.astro";
 import ProjectCard from "../components/projectCard.astro";
+import CurrentlyReading from "../components/currentlyReading.astro";
 ---
 
 <Layout title="Bence R.">
@@ -12,7 +12,7 @@ import ProjectCard from "../components/projectCard.astro";
         class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0 lg:flex lg:justify-between lg:gap-4"
     >
         <header
-            class="flex flex-co justify-between lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:py-24"
+            class="flex flex-col justify-between lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:py-24"
         >
             <div>
                 <h1
@@ -52,6 +52,15 @@ import ProjectCard from "../components/projectCard.astro";
 
                 <hr class="my-6 bg-slate-700 border-0 h-[2px] lg:hidden" />
             </div>
+
+            <CurrentlyReading
+                title="The Well of Ascension"
+                author="Brandon Sanderson"
+                description="Amazing follow-up to a fantastic first book."
+                image="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1619538925i/68429.jpg"
+                href="https://www.goodreads.com/book/show/68429.The_Well_of_Ascension"
+                progress={60}
+            />
 
             <span class="hidden lg:block">
                 Made with ❤️ using <a href="https://astro.build" target="_blank"
@@ -125,7 +134,7 @@ import ProjectCard from "../components/projectCard.astro";
                     name="My Portfolio"
                     description="This site! A simple portfolio site built in an evening using Astro, Tailwind CSS, and Lucide icons. Inspired by Brittany Chiang's v5 portfolio."
                     href="https://mudkip.live"
-                    tags={["Astro", "Tailwind CSS", "Lucide"]}
+                    tags={["Astro", "Tailwind CSS", "Lucide Icons"]}
                 />
             </section>
 
