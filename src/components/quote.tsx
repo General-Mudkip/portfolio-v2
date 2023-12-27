@@ -43,9 +43,9 @@ let randomQuote: string[];
 
 if (typeof window === "undefined") {
     randomQuote = ["", ""];
+} else {
+    randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 }
-
-randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 const Quote = () => {
     return (
