@@ -1,4 +1,3 @@
----
 const quotes = [
     ["Overconfidence is a slow and insidious killer.", "Darkest Dungeon"],
     [
@@ -41,13 +40,16 @@ const quotes = [
 ];
 
 let randomQuote: string[] = quotes[Math.floor(Math.random() * quotes.length)];
----
 
-<section id="quote" class="mb-8">
-    <h2 class="text-2xl font-mono indent-6">
-        "{randomQuote[0]}"
-    </h2>
-    <h3 class="text-sm font-normal indent-6 mt-2">
-        - {randomQuote[1]}
-    </h3>
-</section>
+const Quote = () => {
+    return (
+        <section id="quote" class="mb-8">
+            <h2 class="text-2xl font-mono indent-6">"{randomQuote[0]}"</h2>
+            <h3 class="text-sm font-normal indent-6 mt-2">
+                - {randomQuote[1]}
+            </h3>
+        </section>
+    );
+};
+
+export default Quote;
