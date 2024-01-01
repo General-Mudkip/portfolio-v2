@@ -2,7 +2,16 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				borderRadius: {
+					lg: `var(--radius)`,
+					md: `calc(var(--radius) - 2px)`,
+					sm: "calc(var(--radius) - 4px)",
+				  },
+				muted: `var(--muted)`,
+			}
+		},
 	},
-	plugins: [],
+	plugins: [require("tailwindcss-animate")],
 }

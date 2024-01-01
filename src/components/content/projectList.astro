@@ -1,0 +1,29 @@
+---
+import ProjectCard from "./projectCard.astro";
+---
+
+<section id="projects" class="mb-14">
+    <h2 class="text-2xl font-bold tracking-tight mb-4 text-white sm:text-3xl">
+        Projects
+    </h2>
+
+    <ProjectCard
+        name="BetterExams.ie"
+        description="An alternative to the official examinations.ie; A site where students and teachers alike can easily access and share past exam papers alongside resources for each subject, without having to deal with a form system from 2006."
+        href="https://betterexams.ie"
+        tags={[
+            "Next.js",
+            "React",
+            "Tailwind CSS",
+            "Headless UI",
+            "Framer Motion",
+        ]}
+    />
+
+    <ProjectCard
+        name="My Portfolio"
+        description="This site! A simple portfolio site built in an evening using Astro, Tailwind CSS, and Lucide icons. Inspired by Brittany Chiang's v5 portfolio."
+        href="https://mudkip.live"
+        tags={["Astro", "Tailwind CSS", "Lucide Icons"]}
+    />
+</section>

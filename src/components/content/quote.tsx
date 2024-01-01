@@ -41,21 +41,27 @@ const quotes = [
 
 let randomQuote: string[];
 
-if (typeof window === "undefined") {
-    randomQuote = ["", ""];
-} else {
-    randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-}
-
 const Quote = () => {
-    return (
-        <section id="quote" class="mb-8">
-            <h2 class="text-2xl font-mono indent-6">"{randomQuote[0]}"</h2>
-            <h3 class="text-sm font-normal indent-6 mt-2">
-                - {randomQuote[1]}
-            </h3>
-        </section>
-    );
+    if (typeof window === "undefined") {
+        return (
+            <section id="quote" class="mb-8">
+                <div class="animate-pulse rounded-md bg-gray-700/30 h-8 mb-4 w-full"></div>
+                <div class="animate-pulse rounded-md bg-gray-700/30 h-8 mb-4 w-full"></div>
+                <div class="animate-pulse rounded-md bg-gray-700/30 h-8 mb-4 w-full"></div>
+                <div class="animate-pulse rounded-md bg-gray-700/30 h-6 w-1/2 ml-6"></div>
+            </section>
+        );
+    } else {
+        randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        return (
+            <section id="quote" class="mb-8">
+                <h2 class="text-2xl font-mono indent-6">"{randomQuote[0]}"</h2>
+                <h3 class="text-sm font-normal indent-6 mt-2">
+                    - {randomQuote[1]}
+                </h3>
+            </section>
+        );
+    }
 };
 
 export default Quote;

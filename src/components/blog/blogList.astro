@@ -1,0 +1,25 @@
+---
+import { getAllPosts } from "../../data/blog-data";
+import BlogItem from "./blogItem.astro";
+
+const data = await getAllPosts();
+const allPosts = data.publication.posts.edges;
+
+type postType = {
+    node: {
+        title: string;
+        slug: string;
+        brief: string;
+        tags: { name: string; slug: string }[];
+        publishedAt: string;
+        readTimeInMinutes: number;
+    };
+};
+---
+
+<h2 class="text-2xl font-bold tracking-tight mb-4 text-white sm:text-3xl">
+    Ramblings (Blog)
+</h2>
+<div class="flex flex-col">
+    {allPosts.map((post: postType) => <BlogItem post={post.node} />)}
+</div>
