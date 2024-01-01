@@ -1,9 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Age from "../components/profile/age.astro";
-import Social from "../components/profile/social.astro";
-import ProjectCard from "../components/content/projectCard.astro";
-import CurrentlyReading from "../components/profile/currentlyReading.astro";
 import Quote from "../components/content/quote";
 import BlogList from "../components/blog/blogList.astro";
 import Profile from "../components/profile/profile.astro";
@@ -24,7 +20,7 @@ import ProjectList from "../components/content/projectList.astro";
 
             <ProjectList />
 
-            <BlogList client:load />
+            <BlogList />
 
             <span class="lg:hidden -mx-8 text-center block w-screen">
                 Made with ❤️ using
