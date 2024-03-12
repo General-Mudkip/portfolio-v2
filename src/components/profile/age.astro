@@ -1,12 +1,12 @@
 <span id="asdf" class="font-bold">
-    17.800000000
+    17.900000000
     <script>
         let ageEl = document.querySelector("#asdf");
         setInterval(() => {
-            const birthTimestamp = 1142469000000; // Unix timestamp in milliseconds
+            const birthTimestamp = 1142467200000; // Unix timestamp in milliseconds
             const currentTimestamp = Date.now();
 
-            const millisecondsPerYear = 31536000000; // Approximate number of milliseconds in a year
+            const millisecondsPerYear = 31557600000; // Approximate number of milliseconds in a year
             const yearsElapsed =
                 (currentTimestamp - birthTimestamp) / millisecondsPerYear;
 
