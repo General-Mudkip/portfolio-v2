@@ -37,6 +37,7 @@ const quotes = [
         "And so, does the destination matter? Or is it the path we take? I declare that no accomplishment has substance nearly as great as the road used to achieve it. We are not creatures of destinations. It is the journey that shapes us. Our callused feet, our backs strong from carrying the weight of our travels, our eyes open with the fresh delight of experiences lived.",
         "Brandon Sanderson",
     ],
+    ["It's said that everything you eat, even the air you breath, becomes part of you. The axi that make up the matter you take in come to make up you instead. I, however, find that the moments we take into our souls as memories are far more important than what we eat. We need those moments as surely as the air, and they linger. Potent. Yes, a person is more than their experiences, stacked up like stones. But our best moments are the foundations we use to reach for the sky.", "Wit"],
 ];
 
 let randomQuote: string[];
