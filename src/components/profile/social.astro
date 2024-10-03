@@ -4,12 +4,12 @@ import { Github, Twitter } from "lucide-preact";
 const { name, href, icon } = Astro.props;
 ---
 
-<li class="w-3/4 flex">
+<li class="flex w-3/4">
     <a
         href={href}
-        class="w-3/4 rounded-md p-2 flex flex-row hover:bg-slate-800/50 hover:text-white transition-all duration-150"
+        class="flex w-3/4 flex-row rounded-md p-2 transition-all duration-150 hover:bg-slate-800/50 hover:text-white"
     >
-        <span class="mr-2 align-middle flex">
+        <span class="mr-2 flex align-middle">
             {icon === "Github" ? <Github /> : <span />}
             {icon === "Twitter" ? <Twitter /> : <span />}
             {

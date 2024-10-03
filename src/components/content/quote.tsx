@@ -52,19 +52,19 @@ let randomQuote: string[];
 const Quote = () => {
     if (typeof window === "undefined") {
         return (
-            <section id="quote" class="mb-8">
-                <div class="animate-pulse rounded-md bg-gray-700/30 h-8 mb-4 w-full"></div>
-                <div class="animate-pulse rounded-md bg-gray-700/30 h-8 mb-4 w-full"></div>
-                <div class="animate-pulse rounded-md bg-gray-700/30 h-8 mb-4 w-full"></div>
-                <div class="animate-pulse rounded-md bg-gray-700/30 h-6 w-1/2 ml-6"></div>
+            <section id="Quote" class="mb-8">
+                <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
+                <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
+                <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
+                <div class="ml-6 h-6 w-1/2 animate-pulse rounded-md bg-gray-700/30"></div>
             </section>
         );
     } else {
         randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
         return (
             <section id="quote" class="mb-8">
-                <h2 class="text-2xl font-mono indent-6">"{randomQuote[0]}"</h2>
-                <h3 class="text-sm font-normal indent-6 mt-2">
+                <h2 class="indent-6 font-mono text-2xl">"{randomQuote[0]}"</h2>
+                <h3 class="mt-2 indent-6 text-sm font-normal">
                     - {randomQuote[1]}
                 </h3>
             </section>
