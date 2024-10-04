@@ -2,7 +2,7 @@ const quotes = [
     ["Overconfidence is a slow and insidious killer.", "Darkest Dungeon"],
     [
         "An idiot admires complexity, a genius admires simplicity. The more complicated something is, the more an idiot will admire it. If you make something so clusterfucked he can’t understand it, he’s gonna think you’re a god.",
-        "Terry Pratchet",
+        "Terry Davis",
     ],
     ["If I must fall, I will rise each time a better man.", "Dalinar Kholin"],
     [
@@ -15,7 +15,7 @@ const quotes = [
     ],
     [
         "When my bird was looking at my computer monitor, I thought, ‘Woah, that bird has no idea what he’s looking at.’ And yet what does the bird do? Does he panic? No, he can’t really panic, he just does the best he can. Is he able to live in a world where he’s so ignorant? Well, he doesn’t really have a choice. The bird is okay even though he doesn’t understand the world. You’re that bird looking at the monitor, and you’re thinking to yourself, I can figure this out. Maybe you have some bird ideas. Maybe that’s the best you can do.",
-        "Terry Pratchet",
+        "Terry Davis",
     ],
     [
         "The question, is not whether you will love, hurt, dream, and die. It is what you will love, why you will hurt, when you will dream, and how you will die. This is your choice. You cannot pick the destination, only the path.",
@@ -42,7 +42,7 @@ const quotes = [
         "Wit"
     ],
     [
-        "I've heard that art is the only truly useless creation - intended for no mechanical purpose. Valued only because of the perception of the people who view it. The thing is, everyting is useless, intrinsically. Nothing has value unless we grant it that value. Any object can be worth whatever we decide it to be worth.",
+        "I've heard that art is the only truly useless creation - intended for no mechanical purpose. Valued only because of the perception of the people who view it. The thing is, everything is useless, intrinsically. Nothing has value unless we grant it that value. Any object can be worth whatever we decide it to be worth.",
         "Wit"
     ],
 ];
@@ -52,7 +52,7 @@ let randomQuote: string[];
 const Quote = () => {
     if (typeof window === "undefined") {
         return (
-            <section id="Quote" class="mb-8">
+            <section id="About" class="mb-8">
                 <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
                 <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
                 <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
@@ -62,7 +62,7 @@ const Quote = () => {
     } else {
         randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
         return (
-            <section id="quote" class="mb-8">
+            <section id="About" class="mb-8">
                 <h2 class="indent-6 font-mono text-2xl">"{randomQuote[0]}"</h2>
                 <h3 class="mt-2 indent-6 text-sm font-normal">
                     - {randomQuote[1]}

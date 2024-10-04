@@ -1,27 +1,11 @@
 ---
-import { getAllPosts } from "../../data/blog-data";
 import BlogItem from "./blogItem.astro";
-
-const data = await getAllPosts();
-const allPosts = data.publication.posts.edges;
-
-type postType = {
-    node: {
-        title: string;
-        slug: string;
-        brief: string;
-        tags: { name: string; slug: string }[];
-        publishedAt: string;
-        readTimeInMinutes: number;
-    };
-};
-
-console.log(allPosts)
+import { defineCollection, z } from "astro:content";
 ---
 
 <h2 class="mb-4 text-2xl font-bold tracking-tight text-white sm:text-3xl">
     Ramblings (Blog)
 </h2>
 <div class="flex flex-col">
-    {allPosts.map((post: postType) => <BlogItem post={post.node} />)}
+    <!--{allPosts.map((post: postType) => <BlogItem post={post.node} />)}-->
 </div>

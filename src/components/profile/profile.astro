@@ -1,7 +1,5 @@
 ---
 import Age from "./age.astro";
-import CurrentlyReading from "./currentlyReading.astro";
-import Social from "./social.astro";
 ---
 
 <header
@@ -25,22 +23,25 @@ import Social from "./social.astro";
 
         <hr class="my-6 h-[2px] border-0 bg-slate-700 lg:w-4/5" />
 
-        <ul class="flex flex-col gap-2">
-            <Social
-                name="General-Mudkip"
-                href="https://github.com/General-Mudkip"
-                icon="Github"
-            />
-            <Social
-                name="general.mudkip"
-                href="https://discord.com/users/567665494518267904"
-                icon="Discord"
-            />
-            <Social
-                name="@GeneralMudkip"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                icon="Twitter"
-            />
+        <ul class="flex flex-col gap-1">
+            <li class="flex w-3/4">
+                <a class="group flex items-center py-3" href="/#About">
+                <span class="mr-4 h-px w-16 bg-slate-600 transition-all group-hover:w-24 group-hover:bg-slate-300"> </span>
+
+                <span class="text-md font-mono uppercase tracking-wider text-slate-400 transition-all group-hover:text-slate-200">
+               About 
+                </span>
+            </a>
+            </li>
+            <li class="flex w-3/4">
+                <a class="group flex items-center py-3" href="/#Projects">
+                <span class="mr-4 h-px w-16 bg-slate-600 transition-all group-hover:w-24 group-hover:bg-slate-300"> </span>
+
+                <span class="text-md font-mono uppercase tracking-wider text-slate-400 transition-all group-hover:text-slate-200">
+                Projects
+                </span>
+            </a>
+            </li>
         </ul>
 
         <hr class="my-6 h-[2px] border-0 bg-slate-700 lg:hidden" />
@@ -55,8 +56,8 @@ import Social from "./social.astro";
         progress={15}
     />
  -->
-    <span class="hidden lg:block">
-        Made with ❤️ using <a href="https://astro.build" target="_blank"
+    <span class=" hidden lg:block">
+        Made with ❤️ using <a  class="cursor-pointer font-mono text-white transition-colors duration-200 hover:text-sky-400" href="https://astro.build" target="_blank"
             >Astro</a
         >.</span
     >
