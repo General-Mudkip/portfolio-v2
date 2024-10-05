@@ -1,11 +1,13 @@
 ---
 import BlogItem from "./blogItem.astro";
-import { defineCollection, z } from "astro:content";
+import { defineCollection, getCollection, z } from "astro:content";
+
+let allPosts = await getCollection("ramblings")
 ---
 
-<h2 class="mb-4 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+<h2 id="Ramblings" class="mb-4 text-2xl font-bold tracking-tight text-slate-200 sm:text-3xl">
     Ramblings (Blog)
 </h2>
 <div class="flex flex-col">
-    <!--{allPosts.map((post: postType) => <BlogItem post={post.node} />)}-->
+    {allPosts.map((post) => <BlogItem post={post} />)}
 </div>

@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Quote from "../components/content/quote";
 import PersonalDescription from "../components/content/personalDescription.astro";
 import ProjectList from "../components/content/projectList.astro";
+import BlogList from "../components/blog/blogList.astro";
 ---
 
 <Layout title="Bence R.">
@@ -12,6 +13,8 @@ import ProjectList from "../components/content/projectList.astro";
 
     <ProjectList />
 
+    <BlogList />
+
     <span class="-mx-8 block w-screen text-center lg:hidden">
         Made with ❤️ using
         <a href="https://astro.build" target="_blank">Astro</a>.
@@ -20,6 +23,6 @@ import ProjectList from "../components/content/projectList.astro";
 
 <style>
     a {
-        @apply cursor-pointer font-mono text-white transition-colors duration-200 hover:text-sky-400;
+        @apply cursor-pointer font-mono text-slate-200 transition-colors duration-200 hover:text-sky-400;
     }
 </style>

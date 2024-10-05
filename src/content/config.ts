@@ -4,6 +4,7 @@ import { z, defineCollection } from "astro:content";
 const ramblingsCollection = defineCollection({
   type: "content",
   schema: z.object({
+    slug: z.string(), // Same as file name
     title: z.string(),
     pubDate: z.date(),
     description: z.string(),
