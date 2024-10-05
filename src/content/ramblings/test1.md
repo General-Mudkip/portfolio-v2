@@ -1,5 +1,5 @@
 ---
-slug: "test-post"
+slug: "test1"
 title: "A simple test post."
 pubDate: 2024-10-05
 description: "This is only to ensure that all of the functionality around these blog post works."
