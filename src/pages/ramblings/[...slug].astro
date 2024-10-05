@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from "../../layouts/Layout.astro";
 import { CornerUpLeft } from 'lucide-preact';
-import Prose from '../../components/blog/prose.astro';
+import Prose from '../../components/blog/Prose.astro';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("ramblings");
@@ -11,7 +11,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const { entry }= Astro.props;
+const { entry } = Astro.props;
 //@ts-expect-error Dunno why entry isn't being assigned a type.
 const { Content } = await entry.render();
 
