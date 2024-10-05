@@ -10,4 +10,7 @@ export default defineConfig({
   integrations: [tailwind(), preact()],
   output: "server",
   adapter: vercel(),
+  image: {
+    domains: ["assets.hardcover.app"],
+  },
 });
