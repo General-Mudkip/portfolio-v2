@@ -8,6 +8,7 @@ const hardcoverUrl = "https://www.hardcover.app/books/" + props.book.slug;
 
 //@ts-expect-error Dunno why date isn't being assigned a type.
 const formattedDate = props.book.release_date.slice(0, 4);
+console.log(props);
 ---
 
 <a href={hardcoverUrl} target="_blank">
@@ -24,7 +25,7 @@ const formattedDate = props.book.release_date.slice(0, 4);
                 class="mb-1 flex flex-row gap-x-1 text-sm text-slate-200 transition-all duration-150 group-hover:text-sky-400"
             >
                 {formattedDate} · {props.book.pages} pages · {
-                    props.book.rating.toString().slice(0, 4)
+                    props.book.rating //.toString().slice(0, 4)
                 }
                 <Star size="18" class="place-self-center" />
             </h3>
