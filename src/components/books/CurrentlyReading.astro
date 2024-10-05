@@ -28,6 +28,13 @@ const response = await fetch("https://api.hardcover.app/v1/graphql", {
                 release_date
                 rating
                 slug
+
+                contributions {
+                   author {
+                     name
+                   }
+                }
+
               }
             }
           }

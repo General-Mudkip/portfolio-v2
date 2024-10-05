@@ -12,24 +12,31 @@ const response = await fetch("https://api.hardcover.app/v1/graphql", {
         query TopFive {
           me {
             lists(where: {id: {_eq: 45547}}) {
-                list_books(order_by: {position: asc}) { 
-                    date_added
-                    position
+              list_books(order_by: {position: asc}) { 
+                date_added
+                  position
                     book {
-                            title
-                            pages
-                            book_series {
-                              series {
-                                name
-                              }
-                            }
-                            description
-                            image {
-                              url
-                            }
-                            release_date
-                            rating
-                            slug
+                      title
+                      pages
+                      book_series {
+                        series {
+                          name
+                        }
+                      }
+                      description
+                      image {
+                        url
+                      }
+                      release_date
+                      rating
+                      slug
+                        
+                      contributions {
+                        author {
+                          name
+                        }
+                      }
+
                     }
               }
             }
