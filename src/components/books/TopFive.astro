@@ -1,0 +1,53 @@
+---
+import BookCard from "./BookCard.astro";
+
+const response = await fetch("https://api.hardcover.app/v1/graphql", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        authorization: process.env.HARDCOVER_KEY,
+    },
+    body: JSON.stringify({
+        query: `
+        query TopFive {
+          me {
+            lists(where: {id: {_eq: 45547}}) {
+                list_books(order_by: {position: asc}) { 
+                    date_added
+                    position
+                    book {
+                            title
+                            pages
+                            book_series {
+                              series {
+                                name
+                              }
+                            }
+                            description
+                            image {
+                              url
+                            }
+                            release_date
+                            rating
+                            slug
+                    }
+              }
+            }
+          }
+        }
+`,
+    }),
+});
+
+const json = await response.json();
+const topFive = json["data"]["me"][0]["lists"][0]["list_books"];
+//console.log(topFive)
+---
+
+<h2 class="mb-1 mt-12 text-2xl tracking-tight text-slate-200">Top Five</h2>
+<h3 class="mb-2 text-lg">
+    My five favourite books that I've read, since I've starting tracking them in
+    mid-2023.
+</h3>
+
+{topFive.map((book) => <BookCard props={book} />)}

@@ -8,6 +8,6 @@ let allPosts = await getCollection("ramblings")
 <h2 id="Ramblings" class="mb-4 text-2xl font-bold tracking-tight text-slate-200 sm:text-3xl">
     Ramblings (Blog)
 </h2>
-<div class="flex flex-col">
+<div class="flex flex-col gap-y-4">
     {allPosts.map((post) => <BlogItem post={post} />)}
 </div>

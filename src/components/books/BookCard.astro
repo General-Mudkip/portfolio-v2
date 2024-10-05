@@ -1,0 +1,55 @@
+---
+import { ExternalLink, Star } from "lucide-preact";
+import PositionDiv from "./PositionDiv.astro";
+
+const { props } = Astro.props;
+
+const hardcoverUrl = "https://www.hardcover.app/books/" + props.book.slug;
+
+//@ts-expect-error Dunno why date isn't being assigned a type.
+const formattedDate = props.book.release_date.slice(0, 4);
+---
+
+<a href={hardcoverUrl} target="_blank">
+    <div
+        class="group relative m-2 mb-4 flex max-h-56 flex-row gap-4 rounded-xl border-2 border-slate-500 p-4 transition-all duration-150 hover:border-transparent hover:bg-slate-400/10"
+    >
+        <img
+            src={props.book.image.url}
+            class="m-auto max-h-full max-w-32 basis-1/6 rounded-lg"
+        />
+
+        <div class="flex basis-5/6 flex-col">
+            <h3
+                class="mb-1 flex flex-row gap-x-1 text-sm text-slate-200 transition-all duration-150 group-hover:text-sky-400"
+            >
+                {formattedDate} · {props.book.pages} pages · {
+                    props.book.rating.toString().slice(0, 4)
+                }
+                <Star size="18" class="place-self-center" />
+            </h3>
+
+            <h2
+                class="flex gap-x-2 text-xl font-bold text-slate-200 transition-all duration-150 group-hover:text-sky-400"
+            >
+                <span>{props.book.title}</span>
+
+                <ExternalLink size={16} class="place-self-center" />
+            </h2>
+
+            <h3
+                class="text-md font-mono text-slate-200 transition-all duration-150 group-hover:text-sky-400"
+            >
+                By Insert Author Here
+            </h3>
+
+            <p
+                class="text-truncate overflow-y-scroll indent-4 transition-all duration-150 group-hover:text-white"
+            >
+                {props.book.description}
+            </p>
+
+            <PositionDiv props={props} />
+        </div>
+    </div>
+</a>
