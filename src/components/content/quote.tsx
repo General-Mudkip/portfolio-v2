@@ -1,3 +1,6 @@
+import { RefreshCcw } from "lucide-preact";
+import { signal, type Signal } from '@preact/signals';
+
 const quotes = [
     ["Overconfidence is a slow and insidious killer.", "Darkest Dungeon"],
     [
@@ -47,10 +50,11 @@ const quotes = [
     ],
 ];
 
-let randomQuote: string[];
+
+let randomQuote = signal([""])
 
 const Quote = () => {
-    if (typeof window === "undefined") {
+    if (typeof window == "undefined") {
         return (
             <section id="About" class="mb-8">
                 <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
@@ -60,14 +64,21 @@ const Quote = () => {
             </section>
         );
     } else {
-        randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        randomQuote.value = quotes[Math.floor(Math.random() * quotes.length)];
         return (
             <section id="About" class="mb-8">
-                <h2 class="indent-6 font-mono text-2xl">"{randomQuote[0]}"</h2>
-                <h3 class="mt-2 indent-6 text-sm font-normal">
-                    - {randomQuote[1]}
+                <h2 class="indent-6 font-mono text-2xl">"{randomQuote.value[0]}"</h2>
+                <h3 class="flex mt-2 indent-6 text-sm items-center gap-x-2 font-normal">
+                    <span>- {randomQuote.value[1]}</span>
+                    <button
+                        onClick={() => randomQuote.value = quotes[Math.floor(Math.random() * quotes.length)]}
+                        class="duration-200 transition-all hover:-rotate-180"
+                    >
+                        <RefreshCcw size={16} />
+                    </button>
                 </h3>
-            </section>
+
+            </section >
         );
     }
 };
