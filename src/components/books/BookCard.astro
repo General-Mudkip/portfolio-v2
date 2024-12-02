@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 
 const { props } = Astro.props;
 
-const hardcoverUrl = "https://www.hardcover.app/books/" + props.book.slug;
+const hardcoverUrl = "https://hardcover.app/books/" + props.book.slug;
 
 //@ts-expect-error Dunno why date isn't being assigned a type.
 const formattedDate = props.book.release_date.slice(0, 4);
