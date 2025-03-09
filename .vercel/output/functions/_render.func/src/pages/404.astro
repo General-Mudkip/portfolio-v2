@@ -1,0 +1,56 @@
+--
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Bence R.">
+    <h1 id="heading" class="text-5xl font-bold text-slate-200"></h1>
+
+    <h2 id="hided" class="hidden pt-8 transition-all duration-700">
+    </h2>
+    <a id="return" class="hidden" href="/">return home.</a>
+
+    <span class="-mx-8 block w-screen text-center lg:hidden">
+        Made with ❤️ using
+        <a href="https://astro.build" target="_blank">Astro</a>.
+    </span>
+</Layout>
+
+<style>
+    @reference "tailwindcss";
+    a {
+        @apply cursor-pointer font-mono text-white transition-colors duration-200 hover:text-sky-400;
+    }
+</style>
+
+<script>
+var i = 0;
+var j = 0;
+var txt = "You seem to have lost your way..."
+var txt2 = "This is a 404 page. Let me know if something is supposed to be here. If not,"
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("heading").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+
+    if (i >= txt.length) {
+        document.getElementById("hided").style.display = "block"
+        if (j < txt2.length) {
+            document.getElementById("hided").innerHTML += txt2.charAt(j);
+            j++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    if (j >= txt2.length) {
+        document.getElementById("return").style.display = "block"
+    }
+
+}
+
+typeWriter()
+</script>

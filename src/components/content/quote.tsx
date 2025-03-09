@@ -56,7 +56,7 @@ let randomQuote = signal([""])
 const Quote = () => {
     if (typeof window == "undefined") {
         return (
-            <section id="About" class="mb-8">
+            <section id="About" class="mb-8 scroll-m-8">
                 <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
                 <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
                 <div class="mb-4 h-8 w-full animate-pulse rounded-md bg-gray-700/30"></div>
@@ -66,7 +66,7 @@ const Quote = () => {
     } else {
         randomQuote.value = quotes[Math.floor(Math.random() * quotes.length)];
         return (
-            <section id="About" class="mb-8">
+            <section id="About" class="mb-8 scroll-m-8">
                 <h2 class="indent-6 font-mono text-2xl">"{randomQuote.value[0]}"</h2>
                 <h3 class="flex mt-2 indent-6 text-sm items-center gap-x-2 font-normal">
                     <span>- {randomQuote.value[1]}</span>
