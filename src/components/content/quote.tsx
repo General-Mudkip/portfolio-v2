@@ -72,7 +72,7 @@ const Quote = () => {
                     <span>- {randomQuote.value[1]}</span>
                     <button
                         onClick={() => randomQuote.value = quotes[Math.floor(Math.random() * quotes.length)]}
-                        class="duration-200 transition-all hover:-rotate-180"
+                        class="duration-200 transition-all hover:-rotate-180 hover:cursor-pointer"
                     >
                         <RefreshCcw size={16} />
                     </button>
