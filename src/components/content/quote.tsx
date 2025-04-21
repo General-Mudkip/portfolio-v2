@@ -48,6 +48,14 @@ const quotes = [
         "I've heard that art is the only truly useless creation - intended for no mechanical purpose. Valued only because of the perception of the people who view it. The thing is, everything is useless, intrinsically. Nothing has value unless we grant it that value. Any object can be worth whatever we decide it to be worth.",
         "Wit"
     ],
+    [
+        "My memory is to the world as a drawing is to the photograph. Imperfect. More perfect. We remember what we must, what we choose to, because it is more beautiful and real than the truth.",
+        "Hadrian Marlowe"
+    ],
+    [
+        "The artist sees things not in terms of what is or might be, but in terms of what must be. Of what our world must become. This is why a portrait will—to the human observer—always defeat the photograph",
+        "Hadrian Marlowe"
+    ],
 ];
 
 
