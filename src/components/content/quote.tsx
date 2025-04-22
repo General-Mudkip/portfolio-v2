@@ -1,5 +1,5 @@
 import { RefreshCcw } from "lucide-preact";
-import { signal, type Signal } from '@preact/signals';
+import { signal } from '@preact/signals';
 
 const quotes = [
     ["Overconfidence is a slow and insidious killer.", "Darkest Dungeon"],
